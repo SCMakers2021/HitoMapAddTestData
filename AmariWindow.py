@@ -123,7 +123,7 @@ class classAmariWindow:
         time.sleep(1)
         # 確定ボタンを押す
         self.ClickSubmitButton()
-        time.sleep(5)
+        time.sleep(1)
 
     # 次へボタンを押す
     def ClickNextButton(self):

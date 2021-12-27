@@ -28,7 +28,7 @@ categorySushi = Category("寿司","2","comment/お寿司/お寿司Comment.csv","
 categoryBurger = Category("ハンバーガー","3","comment/ハンバーガー/ハンバーガーComment.csv","/img/ハンバーガー")
 today = datetime.today()
 # deadtime = today + timedelta(days=7)    # 1週間後
-deadtime = today + timedelta(days=0)    # 今日
+deadtimeBase = today + timedelta(days=37)    # 今日
 
 # アマリボタンを押す
 AmariWindow = classAmariWindow(driver)
@@ -41,6 +41,8 @@ for area in areList.List:
     for pos in MapPosition:
         try:
             ran = random.randint(0,3)
+            ran2 = random.randint(0,10)
+            deadtime = deadtimeBase + timedelta(days=ran2)    # 今日
             if(ran == 0):
                 category = categoryBento
             elif(ran == 1):
